@@ -1,0 +1,15 @@
+.du{
+    border: 1px solid brown;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+    background-color:white;
+}
+h1{
+    color: #008000;
+}
+.ab{
+    border: none;
+    background-color: #008000;
+}

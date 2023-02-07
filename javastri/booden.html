@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click để  hiển thị nội dung</p>
+    <input type="number" name="" id="nhap">
+    <button onclick="myFunction()">Try it</button>
+    <p id="Demo"></p>
+    <script>
+        function myFunction() {
+            var number = document.getElementById("nhap").value;
+            var greeting;
+            if (number==0){ greeting = "0"}
+            else if (number>0){ greeting = ">0"}
+            else { greeting = "<0"}
+            document.getElementById("Demo").innerHTML = greeting;
+        }
+       
+    </script>
+    
+</body>
+</html>

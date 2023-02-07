@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-ser;
+}
+.container{
+    width: 980px;
+    margin: 0 auto;
+
+}
+header{
+    width: 980px;
+    height: 100px;
+    background: #cb7802;
+}
+header img{
+    padding-left: 30px;
+    width: 110px;
+    height: 100px;
+
+}
+nav{
+    height: 35px;
+    background-color: darkblue;
+    margin-bottom: 5px;
+}
+.menu ul{
+    list-style: none;
+}
+
+.menu li{
+    float: left;
+    line-height: 35px;
+    padding: 0 15px;
+    
+}
+.menu a{
+    color:#fff;
+    font-size: 14px;
+    text-decoration: none;
+
+}
+nav .search{
+    line-height: 35px;
+    float: right;
+    margin-right: 25px;
+}
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+    width: 2912px;
+    -webkit-animation: slide 14s ease infinite;
+  }
+  
+  .slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+  }
+  
+  
+  @-webkit-keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -728px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    80% {margin-left: -1456px;}
+  }
+article h3 {
+    text-align: center;
+    padding: 15px 0;
+    color: darkblue;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold; 
+
+}
+.new_item{
+    width: 28%;
+    padding: 1%;
+    float: left;
+    border: 1px solid #ccc;
+    margin-left: 3%;
+    
+}
+.new_item h4{
+    font-size: 16px;
+    color: darkblue;
+    
+}
+
+.new_item img{
+    margin: 10px auto;
+}
+.new_item p{
+    font-size: 13px;
+}
+#fix{
+    margin-right: 0;
+}
+
+
+.footer_new{
+    background: blueviolet;
+    height: 150px;
+    width: 980px;
+}

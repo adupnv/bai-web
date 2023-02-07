@@ -1,0 +1,11 @@
+.wap{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+    background-color: aquamarine;
+}
+h3{
+    color: blue;
+}

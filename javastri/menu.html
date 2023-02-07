@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+ <div class="wap">
+    <h1 class="tieude">Chào mừng quý khách đến với cửa hàng của chúng tôi</h1>
+    <h3>Đây là menu của cửa hàng chúng tôi: </h3>
+    <img style="height: 300px;" src="amg/menu-nuoc-ngot-trai-cay.jpg" alt="">
+    <p style="padding-left: 100px; font-size: 24px; color:blueviolet;text-align: center;">Mời quý khách chọn món: </p>
+    <div class="tp">
+        <h4>NƯỚC NGỌT</h4>
+        <p>Nước Ngọt Các Loại</p>
+        <select id="wa">
+            <option value="0">KHÔNG</option>
+            <option value="1">NƯỚC SUỐI</option>
+            <option value="2">COCA COLA</option>
+            <option value="3">7 UP</option>
+            <option value="4">PEPSSI</option>
+            <option value="5">CAM ÉP</option>
+            <option value="6">STING</option>
+            <option value="7">BÒ HÚC</option>
+        </select> <br> <br>
+    
+        <p>Trái Cây</p>
+        <select id="fu">
+            <option value="0">KHÔNG</option>
+            <option value="1">TRÁI CÂY NHỎ</option>
+            <option value="2">TRÁI CÂY LỚN</option>
+            <option value="3">BƯỞI</option>
+        </select> <br> <br>
+        Enter your Money : <input type="text" id="money" value="0"> <br> <br>
+        <button onclick="OK()">OK</button>
+        <button onclick="cancel()">Cancel</button>
+        <p id="ex"></p>
+        <p id="sum"></p>
+        <p id="thua"></p>
+    </div>
+    <script>
+        function OK() {
+            var tienthua;
+            var menuw = document.getElementById("wa");
+            var valuew = menuw.options[menuw.selectedIndex].value;
+            var menuf = document.getElementById("fu");
+            var valuef = menuf.options[menuf.selectedIndex].value;
+            var tiennhap =parseInt(document.getElementById("money").value);
+            var namef;
+            var namew;
+        if(valuew!=0 && valuef!=0){
+            if (valuew ==1) { 
+                    tienthua = tiennhap- 15000;
+                    namew="NƯỚC SUỐI"
+
+            }
+            else if (valuew ==2) {
+            
+                tienthua = tiennhap- 17000;
+                namew="COCA COLA"
+            }
+            else if (valuew ==3) {  
+                tienthua = tiennhap-17000;
+                namew="7 UP"
+
+            }
+            else if (valuew ==4) {        
+                tienthua = tiennhap- 17000;
+                namew="PEPSSI"
+
+            }
+            else if (valuew ==5) {
+                tienthua = tiennhap-17000;
+                namew="CAM ÉP"
+
+            }
+            else if (valuew ==6) {
+                tienthua = tiennhap- 17000;
+                namew="STING"
+            
+            }
+            else if (valuew ==7){
+                tienthua = tiennhap-20000;
+                namew="BÒ HÚC"
+                
+            }
+            if (valuef ==1){  
+                tienthua = tienthua-99000;
+                namef="TRÁI CÂY NHỎ"
+            }
+            else if (valuef ==2){
+                tienthua = tienthua-129000;
+                namef="TRÁI CÂY LỚN"
+            }
+            else if (valuef ==3 ){
+                tienthua=tienthua-198000;
+                namef="BƯỞI"
+            
+            }
+            if (tienthua < 0) {
+                alert("Số dư của bạn không đủ");
+            }
+            else{
+                document.getElementById("ex").innerHTML="Sản Phẩm bạn mua là: "+namew +", "+namef;
+                document.getElementById("sum").innerHTML = "Tổng tất cả là :" + (tiennhap-tienthua) ;
+                document.getElementById("thua").innerHTML = "Số tiền thừa của bạn là :" + parseInt(tienthua);
+            }
+        }
+        else if(valuew!=0 && valuef==0){
+            if (valuew ==1) { 
+                tienthua = tiennhap- 15000;
+                namew="NƯỚC SUỐI"
+
+        }
+        else if (valuew ==2) {
+        
+            tienthua = tiennhap- 17000;
+            namew="COCA COLA"
+        }
+        else if (valuew ==3) {  
+            tienthua = tiennhap-17000;
+            namew="7 UP"
+
+        }
+        else if (valuew ==4) {        
+            tienthua = tiennhap- 17000;
+            namew="PEPSSI"
+
+        }
+        else if (valuew ==5) {
+            tienthua = tiennhap-17000;
+            namew="CAM ÉP"
+
+        }
+        else if (valuew ==6) {
+            tienthua = tiennhap- 17000;
+            namew="STING"
+        
+        }
+        else if (valuew ==7){
+            tienthua = tiennhap-20000;
+            namew="BÒ HÚC"
+            
+        }
+        if (tienthua < 0) {
+            alert("Số dư của bạn không đủ");
+        }
+        else{
+            document.getElementById("ex").innerHTML="Sản Phẩm bạn mua là: "+namew;
+            document.getElementById("sum").innerHTML = "Tổng tất cả là :" + (tiennhap-tienthua) ;
+            document.getElementById("thua").innerHTML = "Số tiền thừa của bạn là :" + parseInt(tienthua);
+        }
+    }
+        else if(valuew==0 && valuef!=0){
+            if (valuef ==1){  
+                tienthua = tiennhap-99000;
+                namef="TRÁI CÂY NHỎ"
+            }
+            else if (valuef ==2){
+                tienthua = tiennhap-129000;
+                namef="TRÁI CÂY LỚN"
+            }
+            else if (valuef ==3 ){
+                tienthua=tiennhap-198000;
+                namef="BƯỞI"
+            
+                
+            }
+            if (tienthua < 0) {
+                alert("Số dư của bạn không đủ");
+            }
+            else{
+                document.getElementById("ex").innerHTML="Sản Phẩm bạn mua là: "+namef;
+                document.getElementById("sum").innerHTML = "Tổng tất cả là :" + (tiennhap-tienthua) ;
+                document.getElementById("thua").innerHTML = "Số tiền thừa của bạn là :" + parseInt(tienthua);
+
+        }
+    }
+
+        }
+    function cancel () {
+        document.getElementById("fu").value="0";
+        document.getElementById("wa").value="0";
+        document.getElementById("thua").innerHTML="";
+        document.getElementById("sum").innerHTML="";
+        document.getElementById("ex").innerHTML="";
+        document.getElementById("money").value="0";}
+    </script>
+
+</div> 
+</body>
+</html>

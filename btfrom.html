@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kq{
+            font-size: 30px;
+            color: brown;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="kq">
+        <p>Kết quả là</p>
+    </div>
+    <script>
+        var a = prompt("nhap chieu dai hinh chu nhat", "");
+        var b = prompt("nhap chieu rong hinh chu nhat", "");
+        //alert("dien tich hinh chu nhat:"+ a*b);
+        document.getElementById("kq").innerHTML= "Kết quả là:" +a*b;
+        </script>
+    <script>
+        alert("Welcome to game zone!");
+        if(confirm("do you want play?")){
+            var n = prompt("Enter your name")
+            alert(n +"! now you're part of game")
+        }
+    </script>
+</body>
+</html>

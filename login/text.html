@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>User Login</h2>
+    <form>
+        User Name: <input type="text" size="25" name="User Name" id="usn">
+        <br><br>
+        PassWord:   <input type="password" size="25" name="Password" id="psw">
+        <br><br>
+        <input type="button" onclick="login();" value="Login">
+        <input type="button" onclick="cancel();" value="Clear">
+    </form>
+    <div id="sms"></div>	
+    <script type="text/javascript">	
+            
+        var usernames = ["adu","tho","tien"];	
+            
+        var passwords = ["321","abc", "xyz"];	
+        function login()	
+            
+        {	 
+        var username = document.getElementById("usn").value;	
+            
+        var password = document.getElementById("psw").value;	
+            
+        var sms = "";		
+            
+        for(var i=0;i<usernames.length;i++)	
+            
+        {	
+            
+        if(username==usernames[i])	
+            
+        {	
+            
+        sms="";	
+            
+        if(password==passwords[i])	
+            
+        {	
+        location.href="https://www.facebook.com/";	
+            
+        }	
+            
+        else{	
+            
+        sms ="sai mật khẩu!";	
+            
+        }	
+            
+        break; 	
+            
+        }	
+            
+        else{	
+            
+        sms ="sai tài khoản!";	
+            
+        }	
+            
+        }	
+            
+        document.getElementById("sms").innerHTML = sms;	
+            
+        }  
+        function cancel()	
+            
+        {	
+            
+        document.getElementById("txt1").value="";	
+            
+        document.getElementById("txt2").value="";	
+            
+        document.getElementById("txt1").focus();	
+            
+        }	
+        </script>	               
+</body>
+</html>
