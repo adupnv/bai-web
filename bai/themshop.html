@@ -1,35 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!DOCTYPE html>								
+<html lang="en">								
+								
+<head>								
+    <title>Store</title>								                               
+    <meta charset="UTF-8">								
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>								
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">								
+    <link rel="stylesheet" href="css/style.css">								
+    <script src="./Sp.js">								
+    </script>								
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>								
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>								
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">								
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">								
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">								
+    <div id="fb-root"></div>								
+</head>								
+								
+<body>					
+    <div class="container-fluild mt-5 md-5 ">								
+        <div class="container">								
+            <div class="h3 mb5">Sản phẩm bán chạy</div>								
+            <div class="row" id="banchay"></div>
+            <div class="product-admin"></div>								
+            </div>								
+        </div>								
+    <script>								
+    listLocal();
+    productAdmin();			
+    </script>
     
-
-</head>
-<body>
+    
     <div class="container">
-        <form name="from" class="from">
-        
-            Product Name: <input type="text" name="product" value="" required>
-            <br> <br>
-            Product Picture: <input type="file" name="img" id="img" value="" required>
-            <br> <br>
-            Product Price: <input type="number" name="price" id="price" value="" required>
-            <br> <br>
-            <input id="add" type="button" onclick="Add()" class="button" value="Add">
-            <div id="product_list"></div>
-        </form>
-        <h4>ĐIỆN THOẠI NỖI BẬT NHẤT</h4>
-        <hr class="new">
-        <div class="row" style="padding-left: 20px;"></div>
-    </div>
-    <script language="javascript" src="shop.js" ></script>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">THêm sản phẩm</button>
     
-</body>
-</html>
+        <!-- Modal -->
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">THêm sản phẩm</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">               
+                    <input type="text" class="form-control" id="name" placeholder="name">
+                  </div>
+                  <div class="form-group">               
+                    <input type="text" class="form-control" id="img" value="Ảnh">
+                  </div>
+                  <div class="form-group">               
+                    <input type="text" class="form-control" id="price" placeholder="nhap gia">
+                  </div>
+                  <div class="form-group">               
+                    <button type="button" class="btn btn-primary" onclick="themSp()">Thêm</button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" style="border: 1px red;" data-dismiss="modal">Exit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script language="javascript" src="shop.js"></script>							
+</body>								
+								
+</html>		
